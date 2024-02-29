@@ -1,0 +1,13 @@
+.banner{
+background-color: #5ce97d;
+width:100%;
+height:100px;
+margin-bottom:50px;
+}
+
+.heading{
+top:10%;
+right:46%;
+position:absolute;
+transform:transform;
+}
