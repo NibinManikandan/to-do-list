@@ -1,8 +1,91 @@
-{% extends 'base.html' %}
-{% block content %}
-<form method="POST">
-    {% csrf_token %}
-    {{f.as_p}}
-    <button type="submit">Confirm</button>
-</form>
-{% endblock %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'css/stylee.css' %}">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4" style="text-align: center;">Make changes here</h3>
+                                                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                                    {% csrf_token %}
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="label" for="name">Task Name</label>
+                                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6"> 
+                                                            <div class="form-group">
+                                                                <label class="label" for="email">Priority</label>
+                                                                <input type="text" class="form-control" name="priority" id="priority" placeholder="priority">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label class="label" for="subject">Date</label>
+                                                                <input type="date" class="form-control" name="date" placeholder="Enter your date">
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <input type="submit" value="Continue" class="btn btn-primary">
+                                                                <div class="submitting"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+                                            <div class="info-wrap bg-primary w-100 p-md-5 p-4">
+                                                <h3 style="text-align: center;">Your Task</h3>
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="text pl-3">
+                                            <p><span>Task Name:</span> {{task.name}}</p>
+                                        </div>
+                                    </div>
+                                        <div class="dbox w-100 d-flex align-items-center">
+                                            <div class="text pl-3">
+                                            <p><span>Priority:</span> {{task.priority}}</a></p>
+                                        </div>
+                                    </div>
+                                        <div class="dbox w-100 d-flex align-items-center">
+                                            <div class="text pl-3">
+                                            <p><span>Date:</span> {{task.date}}</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <script src="{% static 'js/jquery.min.js' %}?v=1.0"></script>
+    <script src="{% static 'js/popper.js' %}?v=1.0"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}?v=1.0"></script>
+    <script src="{% static 'js/main.js' %}?v=1.0"></script>
+
+	</body>
+</html>
