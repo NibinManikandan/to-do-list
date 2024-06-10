@@ -1,8 +1,24 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../images/techie.jpg'); /* Correct path to the image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+    height: 100vh; /* Makes the body take up the full viewport height */
+    width: 100%; /* Makes the body take up the full width */
+    margin: 0;
+  }
+  
+  .contact-wrap {
+    background: rgba(255, 255, 255, 0.8); /* Optional: To make form background semi-transparent */
+    padding: 30px;
+    border-radius: 10px;
+  }
 .banner{
-background-color: #2ad892;
+/* background-color: #2ad892;
 width:100%;
-height:100px;
-margin-bottom:50px;
+height:100px; */
+margin-bottom:100px;
 }
 
 .heading{
